@@ -7,9 +7,13 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve --mode dev"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^6.0.0",
+    "ant-design-vue": "^2.0.0-rc.8",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
