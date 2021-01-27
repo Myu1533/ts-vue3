@@ -2,7 +2,7 @@
   <a-row type="flex" align="middle" class="login">
     <a-col :xs="18" class="right">
       <h1>
-        红塔期货·中台
+        中台
       </h1>
     </a-col>
     <a-col :xs="6">
