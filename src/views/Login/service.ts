@@ -11,7 +11,6 @@ export function loginByUsername(query: LoginForm) {
     // eslint-disable-next-line @typescript-eslint/camelcase
     grant_type: 'password',
   };
-  console.log(data);
   return request({
     url: '/api/auth/oauth/token',
     method: 'post',

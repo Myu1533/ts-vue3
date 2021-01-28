@@ -48,7 +48,12 @@
           </a-input-password>
         </a-form-item>
         <a-form-item>
-          <a-button type="primary" @click="handleSubmit">登录</a-button>
+          <a-button
+            type="primary"
+            shape="round"
+            :loading="submitLoaing"
+            @click="handleSubmit"
+          >登录</a-button>
         </a-form-item>
       </a-form>
     </a-col>
@@ -74,6 +79,7 @@ export default defineComponent({
   },
   data() {
     return {
+      submitLoaing: false,
       form: {
         username: '',
         password: '',
@@ -91,8 +97,12 @@ export default defineComponent({
   },
   methods: {
     handleSubmit() {
+      this.submitLoaing = true;
       loginByUsername(this.form).then((response) => {
         console.log(response);
+        this.submitLoaing = false;
+      }).catch(() => {
+        this.submitLoaing = false;
       });
     },
   },
